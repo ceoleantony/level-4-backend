@@ -26,10 +26,9 @@ def home():
 def get_leaderboard():
 
     try:
-        scores = scores_collection.find().sort([
-            ("score", -1),
-            ("completion_time", 1)
-        ])
+        scores = scores_collection.find().sort(
+    "completion_time", 1
+)
 
         leaderboard = []
 
